@@ -1,0 +1,102 @@
+.hero_container
+  background: url('../../assets/bg.svg'), linear-gradient(#F8FF13, #F8FF13)
+  background-size: cover
+  text-align: center
+  height: 841px
+
+$font-color-black: #000000
+$font-color-green: #008A0E
+$font-color-white: #FFFFFF
+$font-color-orange: #FF682F
+$font-style-italic: italic
+$font-weight-regular: 400
+$text-transform-uppercase: uppercase
+
+.hero
+  font-family: Pari-Match Regular
+
+.win_text
+  padding-right: 15px
+  font-style: $font-style-italic
+  font-weight: 400
+  font-size: 48.8509px
+  line-height: 59px
+  text-transform: $text-transform-uppercase
+  color: $font-color-black
+
+.new_prize_text, .from-kajal, .nicolas-pooran, .and-guaranteed
+  font-style: $font-style-italic
+  font-weight: $font-weight-regular
+  text-transform: $text-transform-uppercase
+
+.new_prize_text
+  align-items: flex-start
+  position: relative
+  display: inline-block
+  font-size: 66px
+  font-weight: 900
+  color: $font-color-green
+  z-index: 0
+  -webkit-text-stroke-width: 1px
+  -webkit-text-stroke-color: $font-color-white
+
+  &::before
+    content: attr(data-text)
+    position: absolute
+    width: 100%
+    height: 100%
+    font-size: 66px
+    color: transparent
+    z-index: -1
+    display: block
+    -webkit-text-stroke-width: 10px
+    -webkit-text-stroke-color: $font-color-orange
+
+.prize_text
+  height: 63px
+
+.sub_text
+  font-family: Pari-Match Regular
+  font-style: $font-style-italic
+  font-weight: 400
+  font-size: 22.8197px
+  line-height: 22px
+  text-transform: $text-transform-uppercase
+  color: $font-color-black
+
+.from_text
+  margin-right: 70px
+
+.or_text
+  margin-left: 95px
+
+.and_text
+  position: relative
+  bottom: 10px
+  padding-right: 10px
+  font-family: Pari-Match Regular
+  font-style: $font-style-italic
+  font-weight: 400
+  font-size: 38.0845px
+  line-height: 37px
+  text-transform: $text-transform-uppercase
+  color: $font-color-black
+
+.additional_text
+  height: 75px
+
+.guaranteed_text
+  font-family: Pari-Match Regular
+  font-style: $font-style-italic
+  font-weight: 400
+  font-size: 38.0845px
+  line-height: 37px
+  text-transform: $text-transform-uppercase
+  color: $font-color-black
+
+.play_now_wrapper
+  margin-top: 10px
+
+.terms_text
+  font-size: 16px
+  color: $font-color-black

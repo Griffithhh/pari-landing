@@ -1,19 +1,35 @@
 import React from 'react';
-import style from './Changes.module.sass'
-import changes_logo from "../../assets/changes_logo.svg";
-import choose from "../../assets/choose.svg";
+import './Changes.sass'
+import '../../styles/main.sass'
 const Changes = () => {
   return (
-      <div className={style.changesContainer}>
-          <div className={style.changesLogo}>
-              <img src={changes_logo} alt=""/>
-              <div className={style.changes}>
-                  <div className={style.changesSec}>
-                      <img src={choose} alt=""/>
-                  </div>
-
+      <div className="changes">
+          <div className='navbar'>
+              <div className='logo-m'>
+                  <p>MAXIMIZE YOUR<br/>WINNING CHANGES!</p>
               </div>
-
+          </div>
+          <div className="box_container">
+          <div className="box">
+              <div className="two_variables_container">
+                  <div className="variables">
+                      <h1>1.</h1>
+                      <div className="choice">
+                          <h2>CHOOSE</h2>
+                          <div className="high">HIGH</div>
+                          <div className="odds">ODDS</div>
+                      </div>
+                  </div>
+                  <div className="variables">
+                      <h1>2.</h1>
+                      <div className="choice">
+                          <h2>TRY</h2>
+                          <div className="high">HIGH</div>
+                          <div className="odds">ODDS</div>
+                      </div>
+                  </div>
+              </div>
+          </div>
           </div>
       </div>
   );

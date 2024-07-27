@@ -1,0 +1,223 @@
+@import '../../styles/mixins'
+
+.leaderboard
+  background-image: url('../../assets/bg_leader.svg'), linear-gradient(#F8FF13, #F8FF13)
+  background-size: cover
+  text-align: center
+  height: 930px
+  position: relative
+  bottom: 2px
+
+.logo_leader_container
+  padding-top: 60px
+
+
+
+.logo-leader h1
+  font-family: Pari-Match Regular
+  font-style: italic
+  font-weight: 800
+  font-size: 34px
+  text-align: center
+  letter-spacing: -0.02em
+  text-transform: uppercase
+  color: #000000
+
+.text
+  font-family: Pari-Match Regular
+  position: relative
+  display: inline-block
+  font-style: italic
+  font-weight: 400
+  font-size: 65.1783px
+  line-height: 78px
+  text-transform: uppercase
+  color: #008A0E
+  z-index: 0
+  -webkit-text-stroke-width: 2px
+  -webkit-text-stroke-color: #FFFFFF
+
+  &::before
+    content: attr(data-text)
+    position: absolute
+    top: 0
+    left: 0
+    font-style: italic
+    font-weight: 400
+    font-size: 65.1785px
+    line-height: 78px
+    text-transform: uppercase
+    color: transparent
+    z-index: -1
+    display: block
+    -webkit-text-stroke-width: 10px
+    -webkit-text-stroke-color: #FF682F
+
+
+
+.logo-leader div
+
+  margin-top: 20px
+  display: inline-block
+  width: 248.39px
+  height: 24px
+  color: #000000
+  background: #FFFFFF
+  font-family: TT-Firs Neue
+  font-style: normal
+  font-weight: 700
+  font-size: 20px
+  line-height: 24px
+  text-align: center
+  text-transform: uppercase
+
+
+.arrow_icon
+  padding-left: 15px
+  font-style: normal
+  font-weight: 700
+  font-size: 21.1116px
+  line-height: 24px
+  text-align: center
+  text-transform: uppercase
+  color: #000000
+.rounds-container
+  padding-top: 20px
+.disabled_btn
+  font-family: TT-Firs Neue
+  font-style: normal
+  font-weight: 700
+  font-size: 16px
+  line-height: 100%
+  leading-trim: both
+  text-edge: cap
+  letter-spacing: -0.02em
+  width: 105px
+  height: 44px
+  color: #FFFFFF
+  cursor: pointer
+  box-sizing: border-box
+  background: #261D59
+  border: 2px solid #FF682F
+  border-radius: 10px
+  margin: 5px
+
+.active_btn
+  font-family: TT-Firs Neue
+  font-style: normal
+  font-weight: 700
+  font-size: 16px
+  line-height: 100%
+  leading-trim: both
+  text-edge: cap
+  letter-spacing: -0.02em
+  width: 105px
+  height: 44px
+  color: #000000
+  cursor: pointer
+  box-sizing: border-box
+  background: #FFFFFF
+  border: 2px solid #FF682F
+  border-radius: 10px
+  margin: 5px
+
+.moto_winner_container
+  background: #0E0447
+  border-radius: 12px
+  width: 334px
+  height: 54px
+  display: flex
+  margin: auto
+.moto_winner_container p
+  margin: auto
+  font-family: TT-Firs Neue
+  font-style: normal
+  font-weight: 600
+  font-size: 15.2029px
+  line-height: 20px
+  text-align: center
+  letter-spacing: 0.03em
+  text-transform: uppercase
+  color: #F8FF13
+
+.moto_winner_container span
+  display: inline-block
+  border-bottom: 1px solid rgba(242, 242, 242, 0.5)
+  font-family: TT-Firs Neue
+  font-style: normal
+  font-weight: 400
+  font-size: 14.117px
+  line-height: 120%
+  letter-spacing: -0.02em
+  color: #F2F2F2
+  margin: auto
+
+.btn-container
+  margin-top: 10px
+  margin-bottom: 10px
+
+.table_container
+  height: 400px
+  background: #0E0447
+  border-radius: 12px
+  width: 334px
+  margin: 20px auto
+  display: flex
+  flex-direction: column
+  align-items: center
+  padding: 20px
+  box-sizing: border-box
+
+  .scroll_content
+    width: 100%
+    height: 100%
+    overflow-y: auto
+    padding-right: 10px
+    box-sizing: border-box
+  ::-webkit-scrollbar
+      width: 8px
+
+  ::-webkit-scrollbar-track
+      background: #6c6832
+      border-radius: 20px
+      margin-top: 5px
+      margin-bottom: 5px
+
+  ::-webkit-scrollbar-thumb
+      background-color: #FFFF00
+      border-radius: 20px
+      border: none
+.winner_container
+  width: 100%
+  display: flex
+  flex-direction: column
+  gap: 5px
+
+.winner
+  font-family: TT-Firs Neue
+  font-style: normal
+  font-weight: 400
+  font-size: 14px
+  line-height: 120%
+  text-edge: cap
+  text-align: center
+  letter-spacing: -0.02em
+  color: #F2F2F2
+  height: 45px
+  width: 100%
+  display: flex
+  justify-content: space-between
+  align-items: center
+  border-bottom: 1px solid #F2F2F2
+  box-sizing: border-box
+
+  div
+    display: flex
+    align-items: center
+
+    span
+      margin-left: 5px
+
+
+
+
