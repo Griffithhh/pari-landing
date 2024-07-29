@@ -12,3 +12,40 @@
   cursor: pointer
   border-radius: 5px
 
+@mixin font-settings($family, $style, $weight, $size, $line-height, $spacing, $transform, $color)
+  font-family: $family
+  font-style: $style
+  font-weight: $weight
+  font-size: $size
+  line-height: $line-height
+  letter-spacing: $spacing
+  text-transform: $transform
+  color: $color
+
+@mixin flex-center
+  display: flex
+  align-items: center
+  justify-content: center
+
+@mixin scrollbar($thumb-color, $track-color)
+  ::-webkit-scrollbar
+    width: 8px
+  ::-webkit-scrollbar-track
+    background: $track-color
+    border-radius: 20px
+    margin-top: 5px
+    margin-bottom: 5px
+  ::-webkit-scrollbar-thumb
+    background-color: $thumb-color
+    border-radius: 20px
+    border: none
+@mixin font-settings($family, $style, $weight, $size, $line-height, $letter-spacing, $decoration, $color)
+  font-family: $family
+  font-style: $style
+  font-weight: $weight
+  font-size: $size
+  line-height: $line-height
+  letter-spacing: $letter-spacing
+  text-decoration: $decoration
+  color: $color
+

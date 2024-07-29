@@ -25,7 +25,7 @@ const Leaderboard = () => {
         score: getRandomScore()
       }));
 
-      // Обновляем состояние раундов
+
       setRoundsData(prevState => ({ ...prevState, [round]: updatedPlayers }));
     }
   };
@@ -33,31 +33,35 @@ const Leaderboard = () => {
   return (
     <div className="leaderboard">
       <div className='logo_leader_container'>
-        <div className='logo-leader'>
-          <h1>The Cricket World Cup <br /> Tournament</h1>
-          <span className='text' data-text=" LEADERBOARD ">LEADERBOARD</span>
-          <div>More prize points</div>
+        <h1>The Cricket World Cup <br/> Tournament</h1>
+        <span className='text' data-text=" LEADERBOARD ">LEADERBOARD</span>
+        <div className='more_prize_flex'>
+          <div className="info_points">
+          <div className="flex_container">
+          <span className='more_white'>More prize points</span>
           <span className='arrow_icon'>&gt;&gt;</span>
-          <div style={{ width: 337 }}>More chances to win big!</div>
+          </div>
+          <span className='more_chances_white'>More chances to win big!</span>
         </div>
+          </div>
       </div>
       <div className="rounds_container">
         <div className='btn-container'>
           <button
-            className={activeRound === 1 ? 'active_btn' : 'disabled_btn'}
-            onClick={() => handleRoundClick(1)}
+              className={activeRound === 1 ? 'active_btn' : 'disabled_btn'}
+              onClick={() => handleRoundClick(1)}
           >
             1 Round
           </button>
           <button
-            className={activeRound === 2 ? 'active_btn' : 'disabled_btn'}
-            onClick={() => handleRoundClick(2)}
+              className={activeRound === 2 ? 'active_btn' : 'disabled_btn'}
+              onClick={() => handleRoundClick(2)}
           >
             2 Round
           </button>
           <button
-            className={activeRound === 3 ? 'active_btn' : 'disabled_btn'}
-            onClick={() => handleRoundClick(3)}
+              className={activeRound === 3 ? 'active_btn' : 'disabled_btn'}
+              onClick={() => handleRoundClick(3)}
           >
             3 Round
           </button>
@@ -67,14 +71,24 @@ const Leaderboard = () => {
           <span>00000</span>
         </div>
         <div className="table_container">
-          <div className="scroll_content">
-            <div className="winner_container">
-              {(activeRound && roundsData[activeRound] || initialPlayers).map((player, index) => (
-                <div className="winner" key={index}>
-                  <div>{player.id} <span>{player.number}</span></div>
-                  <div>{player.score}</div>
-                </div>
+          <div className="table_container_info">
+            <div className="flex-container">
+              <div className="left"><span>№</span></div>
+              <div className="center"><span>User ID</span></div>
+              <div className="right"><span>Prize Points</span></div>
+            </div>
+          </div>
+          <div className="players_info">
+            <div className="scroll_content">
+              <div className="winner_container">
+                {(activeRound && roundsData[activeRound] || initialPlayers).map((player, index) => (
+                  <div className="winner" key={index}>
+                    <div><span className='player_id'>{player.id}</span> <span
+                        className='player_number'>{player.number}</span></div>
+                    <div><span className='player_score'>{player.score}</span></div>
+                  </div>
               ))}
+              </div>
             </div>
           </div>
         </div>

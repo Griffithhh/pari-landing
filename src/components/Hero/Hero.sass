@@ -1,35 +1,28 @@
-.hero_container
-  background: url('../../assets/bg.svg'), linear-gradient(#F8FF13, #F8FF13)
+@import '../../styles/mixins'
+@import "../../styles/variables"
+.hero-container
+  background-color: $background-color-yellow
+  background-image: url('../../assets/bg.png')
+  background-repeat: no-repeat
+  background-position: center center
   background-size: cover
   text-align: center
   height: 841px
-
-$font-color-black: #000000
-$font-color-green: #008A0E
-$font-color-white: #FFFFFF
-$font-color-orange: #FF682F
-$font-style-italic: italic
-$font-weight-regular: 400
-$text-transform-uppercase: uppercase
+  width: 100%
 
 .hero
   font-family: Pari-Match Regular
 
-.win_text
+.hero__win-text
   padding-right: 15px
-  font-style: $font-style-italic
-  font-weight: 400
-  font-size: 48.8509px
-  line-height: 59px
-  text-transform: $text-transform-uppercase
-  color: $font-color-black
-
-.new_prize_text, .from-kajal, .nicolas-pooran, .and-guaranteed
-  font-style: $font-style-italic
-  font-weight: $font-weight-regular
+  @include font-settings('Pari-Match Regular', $font-style-italic, 400, 48.8509px, 59px, normal, none, $font-color-black)
   text-transform: $text-transform-uppercase
 
-.new_prize_text
+.hero__new-prize-text, .hero__from-kajal, .hero__nicolas-pooran, .hero__and-guaranteed
+  @include font-settings('Pari-Match Regular', $font-style-italic, $font-weight-regular, inherit, inherit, normal, none, inherit)
+  text-transform: $text-transform-uppercase
+
+.hero__new-prize-text
   align-items: flex-start
   position: relative
   display: inline-block
@@ -52,51 +45,251 @@ $text-transform-uppercase: uppercase
     -webkit-text-stroke-width: 10px
     -webkit-text-stroke-color: $font-color-orange
 
-.prize_text
+.hero__prize-text span
+  bottom: 15px
+
+.hero__prize-text
   height: 63px
 
-.sub_text
-  font-family: Pari-Match Regular
-  font-style: $font-style-italic
-  font-weight: 400
-  font-size: 22.8197px
-  line-height: 22px
+.hero__sub-text
+  @include font-settings('Pari-Match Regular', $font-style-italic, 400, 22.8197px, 22px, normal, none, $font-color-black)
   text-transform: $text-transform-uppercase
-  color: $font-color-black
 
-.from_text
+.hero__from-text
   margin-right: 70px
 
-.or_text
+.hero__or-text
   margin-left: 95px
 
-.and_text
+.hero__and-text
   position: relative
   bottom: 10px
   padding-right: 10px
-  font-family: Pari-Match Regular
-  font-style: $font-style-italic
-  font-weight: 400
-  font-size: 38.0845px
-  line-height: 37px
+  @include font-settings('Pari-Match Regular', $font-style-italic, 400, 38.0845px, 37px, normal, none, $font-color-black)
   text-transform: $text-transform-uppercase
-  color: $font-color-black
 
-.additional_text
+.hero__additional-text
   height: 75px
 
-.guaranteed_text
-  font-family: Pari-Match Regular
-  font-style: $font-style-italic
-  font-weight: 400
-  font-size: 38.0845px
-  line-height: 37px
+.hero__guaranteed-text
+  @include font-settings('Pari-Match Regular', $font-style-italic, 400, 38.0845px, 37px, normal, none, $font-color-black)
   text-transform: $text-transform-uppercase
-  color: $font-color-black
 
-.play_now_wrapper
+.hero__play-now-wrapper
   margin-top: 10px
 
-.terms_text
+.hero__terms-text
   font-size: 16px
   color: $font-color-black
+
+@media (min-width: 450px)
+  .hero__from-text
+    margin-right: 170px
+  .hero__or-text
+    position: relative
+    top: 10px
+  .hero__and-text
+    font-size: 60.0845px
+  .hero__sub-text
+    font-size: 30.8197px
+  .hero__prize-text
+    height: 80px
+  .hero__logo img
+    width: 300px
+  .hero__new-prize-text
+    font-size: 80px
+
+    &::before
+      font-size: 80px
+  .hero__logo img
+    margin-top: 50px
+
+  .hero-container
+    height: 1000px
+  .hero__win-text
+    font-size: 70px
+  .hero__additional-text
+    height: 90px
+  .hero__terms-text
+    font-size: 25px
+  .hero__play-now-wrapper img
+    width: 310px
+
+@media (min-width: 550px)
+  .hero__from-text
+    margin-right: 180px
+  .hero__or-text
+    position: relative
+    top: 15px
+  .hero__and-text
+    font-size: 80.0845px
+  .hero__sub-text
+    height: 60px
+    font-size: 45.8197px
+  .hero__prize-text
+    height: 110px
+  .hero__logo img
+    width: 320px
+  .hero__new-prize-text
+    font-size: 100px
+
+    &::before
+      font-size: 100px
+  .hero__logo img
+    margin-top: 110px
+
+  .hero-container
+    height: 950px
+  .hero__win-text
+    font-size: 80px
+  .hero__additional-text
+    height: 130px
+  .hero__terms-text
+    font-size: 35px
+  .hero__play-now-wrapper img
+    width: 330px
+  .hero-container
+    height: 1300px
+@media (min-width: 720px)
+  .hero__from-text
+    margin-right: 180px
+  .hero__or-text
+    position: relative
+    top: 25px
+  .hero__and-text
+    font-size: 90.0845px
+  .hero__sub-text
+    height: 60px
+    font-size: 50.8197px
+  .hero__guarantee-text
+    margin-top: 20px
+  .hero__prize-text
+    height: 130px
+  .hero__logo img
+    width: 380px
+  .hero__new-prize-text
+    font-size: 120px
+
+    &::before
+      font-size: 120px
+  .hero__logo img
+    margin-top: 120px
+
+  .hero-container
+    height: 1300px
+  .hero__win-text
+    font-size: 90px
+  .hero__additional-text
+    height: 120px
+  .hero__terms-text
+    font-size: 45px
+  .hero__play-now-wrapper img
+    width: 350px
+  .hero-container
+    height: 1500px
+@media (min-width: 1080px)
+  .hero-container
+    background-image: url('../../assets/bg_pc.png')
+    width: 100%
+  .hero__navbar
+    text-align: left
+    padding-left: 80px
+  .hero__logo img
+    width: 598px
+  .hero
+    text-align: left
+    padding-left: 70px
+  .hero__win-text
+    font-size: 108.995px
+  .hero__new-prize-text
+    letter-spacing: -0.06em
+    font-size: 145.425px
+    &::before
+      font-size: 145.425px
+  #hero__new-prize-text
+    font-size: 96.2735px
+    &::before
+      font-size: 96.2735px
+  .hero__prize-text
+    height: 130px
+  .hero__prize-text span
+    bottom: 40px
+  .hero__sub-text
+    height: 80px
+    font-size: 52.3827px
+  .hero__from-text
+    height: 100px
+    margin-right: 170px
+  .hero__or-text
+    position: relative
+    top: 20px
+    margin-left: 155px
+  .hero__additional-text
+    height: 110px
+  .hero__guaranteed-text
+    margin-left: 130px
+    font-size: 55.227px
+  .hero__play-now-wrapper img
+    width: 350px
+  .hero__play-now-wrapper
+    padding-left: 50px
+  .hero__terms-text
+    font-size: 18.3128px
+    padding-left: 150px
+@media (min-width: 1435px)
+  .hero-container
+    background-image: url('../../assets/bg_pc.png')
+    width: 100%
+  .hero__navbar
+    text-align: left
+    padding-left: 100px
+  .hero__logo img
+    width: 598px
+  .hero
+    text-align: left
+    padding-left: 100px
+  .hero__win-text
+    font-size: 108.995px
+  .hero__new-prize-text
+    letter-spacing: -0.06em
+    font-size: 145.425px
+    &::before
+      font-size: 145.425px
+  #hero__new-prize-text
+    font-size: 96.2735px
+    &::before
+      font-size: 96.2735px
+  .hero__prize-text
+    height: 130px
+  .hero__prize-text span
+    bottom: 40px
+  .hero__sub-text
+    height: 80px
+    font-size: 52.3827px
+  .hero__from-text
+    height: 100px
+    margin-right: 170px
+  .hero__or-text
+    position: relative
+    top: 20px
+    margin-left: 155px
+  .hero__additional-text
+    height: 110px
+  .hero__guaranteed-text
+    margin-left: 130px
+    font-size: 55.227px
+  .hero__play-now-wrapper img
+    width: 350px
+  .hero__play-now-wrapper
+    padding-left: 50px
+  .hero__terms-text
+    font-size: 18.3128px
+    padding-left: 150px
+
+@media (min-width: 2060px)
+    .hero__navbar
+     text-align: left
+     padding-left: 360px
+    .hero
+     text-align: left
+     padding-left: 400px

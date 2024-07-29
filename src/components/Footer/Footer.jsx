@@ -18,6 +18,7 @@ import secure_icon from '../../assets/secure_icon.svg';
 const Footer = () => {
   return (
       <div className="footer_container">
+          <div className="footer_flex_container">
           <div className="footer_head">
               <ul>
                   <li><img src={hdfc_bank} alt="HDFC Bank"/></li>
@@ -48,7 +49,7 @@ const Footer = () => {
               </div>
           </div>
           <div className="privacy">
-              <p>Responsible gambling</p>
+              <p id='visible_gambling'>Responsible gambling</p>
               <div className="social_icons_privacy">
                   <ul>
                       <li><img src={fb_icon} alt=""/></li>
@@ -64,6 +65,7 @@ const Footer = () => {
                   </ul>
               </div>
           </div>
+      </div>
           <div className="text_container">
               <p>©️ 1994-2024 Parimatch – Best online betting company. This website is operated by PMSPORT N.V.
                   (reg. number 146906) with a registered address at Schout Bij Nacht Doormanweg 40, Curaçao.

@@ -4,10 +4,17 @@
   background-size: cover
   text-align: center
   height: 835px
-  position: relative
+  width: 100%
+  transition: height 0.5s ease
   z-index: 1
 
+
+
+.logo
+  text-align: center
 .logo p
+  margin: auto
+  width: 200px
   font-family: Pari-Match Regular
   padding-top: 60px
   font-style: italic
@@ -16,7 +23,6 @@
   line-height: 41px
   leading-trim: both
   text-edge: cap
-  text-align: center
   letter-spacing: -0.02em
   text-transform: uppercase
   color: #F8FF13
@@ -52,8 +58,10 @@
  right: 30px
 
 .wrapper_2
+ height: 120px
  right: 15px
 .wrapper_3
+  height: 190px
   bottom: 30px
 .rules_number
     font-family: Pari-Match Regular
@@ -69,7 +77,6 @@
 
 
 .p_txt
-
   color: #FFFFFF
   font-family: TT-Firs Neue
   font-style: normal
@@ -80,8 +87,11 @@
   text-edge: cap
   letter-spacing: -0.02em
 
-
-
+.text_rules
+  position: relative
+  top: 35px
+.rules_info
+  display: flex
 
 
 .span_txt
@@ -115,3 +125,46 @@
 #text_rules_3
   position: relative
   right: 22px
+
+.moto_container
+  position: absolute
+@media (min-width: 450px)
+  .rules
+   height: 1000px
+@media (min-width: 550px)
+    .rules
+     height: 1100px
+@media (min-width: 1080px)
+  .line_between
+    height: 7px
+    width: 200px
+    background: #F2F2F2
+    margin-top: 80px
+  .rules
+    height: 800px
+    background-image: url('../../assets/bg_blue_pc.png')
+  .rules_container
+    margin-top: 100px
+    height: 350px
+    width: 100%
+    text-align: center
+    justify-content: center
+    display: flex
+  .wrapper_1, .wrapper_2, .wrapper_3, .wrapper_4
+    height: 500px
+    display: block
+
+  .rules_info
+    position: relative
+    bottom: 30px
+    display: flex
+  .logo p
+    position: relative
+    top: 70px
+    width: 400px
+  .join-btn img
+    margin-right: 80px
+
+
+
+

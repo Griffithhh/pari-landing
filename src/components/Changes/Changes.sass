@@ -1,11 +1,19 @@
 @import '../../styles/mixins'
+
 .changes
-  background: #E72687
+  background-color: #E72687
   background-image: url('../../assets/bg_pink.png')
+  background-repeat: no-repeat
+  background-position: center
   background-size: cover
   text-align: center
   height: 900px
+  position: relative
+  transition: height 0.5s ease
+
 .logo-m p
+  width: 300px
+  margin: auto
   padding-top: 62px
   font-family: Pari-Match Regular
   font-style: italic
@@ -17,21 +25,23 @@
   text-align: center
   letter-spacing: -0.02em
   text-transform: uppercase
-
   color: #F8FF13
+
 .box_container
   padding-top: 30px
   @include flex-center
+
 .box
   height: 355.86px
   width: 280.07px
   background: #F8FF13
   border: 4.11176px solid #130655
   border-radius: 20.5588px
-
+  display: flex
+  justify-content: center
+  align-items: center
 
 .two_variables_container
-  margin: 60px auto
   width: 196.95px
   height: 237.6px
 
@@ -75,6 +85,7 @@
   width: 133.66px
   height: 37.26px
   background: #FFFFFF
+
 .variables h2
   font-family: TT-Firs Neue
   font-style: normal
@@ -84,3 +95,43 @@
   text-transform: uppercase
   color: #000000
 
+@media (min-width: 450px)
+  .logo-m
+    padding-top: 100px
+  .changes
+    height: 1200px
+@media (min-width: 550px)
+    .changes
+      height: 1400px
+    .box
+      margin-top: 100px
+      width: 400px
+      height: 400px
+@media (min-width: 680px)
+    .changes
+      height: 1500px
+
+
+@media (min-width: 1080px)
+  .changes
+    width: 100%
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+    text-align: center
+    height: 650px
+    background-image: url('../../assets/bg_pink_pc.png')
+
+  .box
+    width: 530.07px
+    height: 230px
+  .two_variables_container
+    margin-right: 20px
+    height: 130px
+    display: flex
+    justify-content: center
+  .variables
+    margin-left: 20px
+
+  .logo-m p
+    width: 600px
