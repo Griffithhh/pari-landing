@@ -1,8 +1,6 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+I would like to describe the functionality of my website. 
+In the Leaderboard component, there is a list of players that I gather from a JSON object, displaying each round with different results. 
+This is managed by clicking on a button, which can also be active or inactive, utilizing the Math.floor function. Additionally, 
+I have implemented checkboxes that show relevant information. 
+I also added lazy loading of the page. 
+It is noticeable if you set a speed limit or use the setTimeout git amethod (I didn't use it).
